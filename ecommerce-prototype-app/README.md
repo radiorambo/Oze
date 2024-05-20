@@ -4,6 +4,9 @@ Email `user@email.com`
 
 Password `password`
 
+## Android Apk
+- Check in the folder `ecommerce-prototype-app` with name `android_ecommerce_app.apk` or https://github.com/radiorambo/Oze/blob/main/ecommerce-prototype-app/android_ecommerce_app.apk
+
 ## Features List
 
 - Geolocation - View the location coordinates
