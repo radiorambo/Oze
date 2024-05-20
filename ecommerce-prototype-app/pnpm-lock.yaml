@@ -8,7 +8,16 @@ importers:
 
   .:
     dependencies:
+      '@capacitor/action-sheet':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
       '@capacitor/android':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
+      '@capacitor/app':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
+      '@capacitor/camera':
         specifier: ^6.0.0
         version: 6.0.0(@capacitor/core@6.0.0)
       '@capacitor/cli':
@@ -17,6 +26,27 @@ importers:
       '@capacitor/core':
         specifier: ^6.0.0
         version: 6.0.0
+      '@capacitor/filesystem':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
+      '@capacitor/geolocation':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
+      '@capacitor/haptics':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
+      '@capacitor/local-notifications':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
+      '@capacitor/share':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
+      '@capacitor/status-bar':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
+      '@capacitor/toast':
+        specifier: ^6.0.0
+        version: 6.0.0(@capacitor/core@6.0.0)
       '@supabase/supabase-js':
         specifier: ^2.43.2
         version: 2.43.2
@@ -77,8 +107,23 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
+  '@capacitor/action-sheet@6.0.0':
+    resolution: {integrity: sha512-2NHzuFDlFeZCpYeeuy2h4OyRGUD9iIs/5OM/eaglBjn8dnn/SiMpbFkin5ASjsuYbG+FsmsA+UuFfHVqw88/qQ==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
   '@capacitor/android@6.0.0':
     resolution: {integrity: sha512-NwL87VO9F1WY/EgvJZN9pIhjejq688k2fRW6XWNLVe3cgGE6nUb9J34KI68fhx3139cf2LVGPUYs+mwZC8esiQ==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/app@6.0.0':
+    resolution: {integrity: sha512-X5UGd90Jh5p9rmoPyMqFyFWqOypdJgVJhYcM5X1YyDVJJGzmJ5MuYv1+ajj5DW9Qyh+5a3th9WYptdGby8jidA==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/camera@6.0.0':
+    resolution: {integrity: sha512-AZ/gfVPC3lsKbk9/yHI60ygNyOkN5jsCb4bHxXFbW0bss3XYtR/J1XWFJGkFNiRErNnTz6jnDrhsGCr7+JPfiA==}
     peerDependencies:
       '@capacitor/core': ^6.0.0
 
@@ -89,6 +134,41 @@ packages:
 
   '@capacitor/core@6.0.0':
     resolution: {integrity: sha512-NvxIQsJcMiIV+Le1DilR2GGyQQbDInfXK1UywGROQ5mycdFlW5XoAPZ+MKnFGB123RoEgE3uhDGgwTXUmSlX9A==}
+
+  '@capacitor/filesystem@6.0.0':
+    resolution: {integrity: sha512-GnC4CBfky7fvG9zSV/aQnZaGs6ZJ90AaQorr53z81ArTCqcrSUeBMuCxWmvti9HrdXLhBavyA1UOjvRGObOFjg==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/geolocation@6.0.0':
+    resolution: {integrity: sha512-8wrZe6gqfZmsCdvOvrqmezi2Pa8Nz6bQUFbDWsjUKHRzs+qreYNXngzhgKO83GEhHvodiJMnoDJrD2JeQt7FZg==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/haptics@6.0.0':
+    resolution: {integrity: sha512-z2TmB+pTbd98Il2I1xpZGClCFwORxxP2m9f1a0rh70c2ubj2atVyZctgxrx1fuoExZTNGSxHaylWfrmjmtelVg==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/local-notifications@6.0.0':
+    resolution: {integrity: sha512-a/g/ZlPgaBXue374oNzGvvNZWNpnclfcLzfE/P/PjhHxdHsM7J3OK0IfmjrEsRiON4AEIga+dkHi5yBjNAHCFw==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/share@6.0.0':
+    resolution: {integrity: sha512-Doqvtxe9tejkjq+P9hZzDslR6VetM02R6N61GBavVBWkQj4N+xWNDA8zISG3PzuGBffGtTfHC6L0W+XySFY5nw==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/status-bar@6.0.0':
+    resolution: {integrity: sha512-Wo0ILugYlmENegKDgTzVCPjbvP8h1ObgHslLdgeVG643ViMS/diausHIq8e104WIKCXtKIELmQeYVp9mX7932g==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/toast@6.0.0':
+    resolution: {integrity: sha512-aDtNMHi0we5G2AFHGzJmcFuJJYIK1rt68x4gguz50UaC1rL5tM1SizW3Z85BJpKKteRNzEU+0G9nYCx26YGmag==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
 
   '@esbuild/aix-ppc64@0.20.2':
     resolution: {integrity: sha512-D+EBOJHXdNZcLJRBkhENNG8Wji2kgc9AZ9KiPr1JuZjsNtyHzrsfLRrY0tk2H2aoFu6RANO1y1iPPUCDYWkb5g==}
@@ -1644,7 +1724,19 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
+  '@capacitor/action-sheet@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
   '@capacitor/android@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
+  '@capacitor/app@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
+  '@capacitor/camera@6.0.0(@capacitor/core@6.0.0)':
     dependencies:
       '@capacitor/core': 6.0.0
 
@@ -1674,6 +1766,34 @@ snapshots:
   '@capacitor/core@6.0.0':
     dependencies:
       tslib: 2.6.2
+
+  '@capacitor/filesystem@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
+  '@capacitor/geolocation@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
+  '@capacitor/haptics@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
+  '@capacitor/local-notifications@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
+  '@capacitor/share@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
+  '@capacitor/status-bar@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
+
+  '@capacitor/toast@6.0.0(@capacitor/core@6.0.0)':
+    dependencies:
+      '@capacitor/core': 6.0.0
 
   '@esbuild/aix-ppc64@0.20.2':
     optional: true

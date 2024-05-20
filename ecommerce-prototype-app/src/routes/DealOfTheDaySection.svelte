@@ -1,7 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
+	import { products, cart } from '$lib/utils.js';
 	let countdown = 3600;
-
+	$: productsList = $products.data;
+	$: loading = $products.loading;
 	onMount(() => {
 		const timer = setInterval(() => {
 			if (countdown > 0) {
@@ -9,8 +11,13 @@
 			}
 		}, 1000);
 
-		return () => clearInterval(timer); 
+		return () => clearInterval(timer);
 	});
+
+	function addToCart(product) {
+		$cart = [...$cart, product];
+		console.log($cart);
+	}
 
 	// Function to get formatted time string
 	function getTimeString(seconds) {
@@ -21,10 +28,9 @@
 	}
 
 	$: formattedTime = getTimeString(countdown);
-	// const filteredData = data.filter((product) => product.id <= 6);
 </script>
 
-<div class="pb-20 bg-green-700">
+<div class="pb-10 bg-green-700">
 	<div class="container mx-auto">
 		<div class="px-4 pt-16 text-green-50 md:px-20">
 			<div class="mb-8 text-3xl font-bold md:text-4xl md:mb-4">Deals of the day</div>
@@ -34,35 +40,36 @@
 					{formattedTime}
 				</p>
 			</div>
-			<div class="overflow-x-scroll pb-2">
-				<!-- <div class="flex gap-2 md:gap-6 w-fit">
-              {filteredData.map((product) => (
-                <div key={product} class="p-4 w-64 bg-green-600">
-                  <div class="p-2 w-full bg-green-300 shadow-lg h-fit">
-                    <img src={product.photo} />
-                  </div>
-                  <div class="p-2 mt-8 bg-green-300/20">
-                    <p class="mb-1 text-xl font-normal text-green-50 whitespace-nowrap">
-                      {product.product}
-                    </p>
-                    <div class="flex justify-between items-center">
-                      <p class="text-sm font-normal">
-                        <span class="text-green-900">Rs</span>{" "}
-                        {product.price}
-                      </p>
-                      <button
-                        onClick={() => {
-                          addToCart(product);
-                        }}
-                        class="px-4 py-1 text-sm text-white bg-green-800 shadow-sm hover:bg-green-900 active:bg-green-800"
-                      >
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> -->
+			<div class="overflow-x-scroll pb-2 flex gap-2">
+				{#if loading}
+					<p>Loading...</p>
+				{:else}
+					{#each productsList as product}
+						<div class=" bg-green-600 p-4">
+							<div class="p-2 bg-green-300 shadow-lg">
+								<img class="w-[208px] h-[250px]" src={product.photo} alt={product.product} />
+							</div>
+							<div class="p-2 mt-8 bg-green-300/20 w-48">
+								<p class="mb-1 text-xl font-normal text-green-50 whitespace-nowrap">
+									{product.product}
+								</p>
+								<div class="flex justify-between items-center">
+									<p class="text-sm font-normal">
+										<span class="text-green-900">Rs {product.price}</span>
+									</p>
+									<button
+										class="px-4 py-1 text-sm text-white bg-green-800 shadow-sm hover:bg-green-900 active:bg-green-800"
+										on:click={() => {
+											addToCart(product);
+										}}
+									>
+										Add to cart
+									</button>
+								</div>
+							</div>
+						</div>
+					{/each}
+				{/if}
 			</div>
 		</div>
 	</div>

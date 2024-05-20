@@ -1,5 +1,12 @@
 {
   "appId": "com.ecommerce.app",
   "appName": "ecommerce-prototype-app",
-  "webDir": "build"
+  "webDir": "build",
+
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon_config_sample",
+      "iconColor": "#488AFF"  
+      }
+  }
 }

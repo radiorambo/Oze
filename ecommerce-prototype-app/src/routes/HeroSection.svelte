@@ -1,7 +1,7 @@
 <div class="bg-green-300">
 	<div class="container mx-auto">
 		<div
-			class=" flex flex-col pb-10 md:pb-20 place-content-end h-[90vh] max-h-[1000px] px-4 md:px-20"
+			class=" flex flex-col pb-10 md:pb-20 place-content-end h-[90vh] max-h-[1000px] px-4 md:px-20 max-w-screen-xl"
 		>
 			<div>
 				<h1 class="mb-10 min-w-full text-7xl font-bold lg:text-8xl">

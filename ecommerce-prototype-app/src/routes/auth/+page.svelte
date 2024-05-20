@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	import utils, { userSession } from '$lib/utils.js';
 
 	let email;
@@ -16,7 +15,7 @@
 
 <div class="px-2 bg-green-100 md:px-20">
 	<div class="container mx-auto">
-		<div class="flex justify-center items-center min-h-screen">
+		<div class="flex flex-col justify-center items-center min-h-screen">
 			<div class="p-6 w-full max-w-md bg-green-800 shadow-md">
 				{#if loggedInSuccessfully}
 					<div>
@@ -36,7 +35,7 @@
 								<input
 									class="px-3 py-2 w-full leading-tight rounded border appearance-none focus:outline-none focus:shadow-outline"
 									type="email"
-									placeholder="user"
+									placeholder="user@email.com"
 									bind:value={email}
 								/>
 							</div>
@@ -47,7 +46,7 @@
 								<input
 									class="px-3 py-2 w-full leading-tight border appearance-none focus:outline-none focus:shadow-outline"
 									type="password"
-									placeholder="pass"
+									placeholder="password"
 									bind:value={password}
 								/>
 							</div>
@@ -65,6 +64,15 @@
 					</div>
 				{/if}
 			</div>
+			{#if loggedInSuccessfully}
+				<div class="mt-4 p-2 bg-red-700">
+					<button class="text-green-50"
+						on:click={() => {
+							utils.signOut();
+						}}>LogOut</button
+					>
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
